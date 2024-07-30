@@ -1,0 +1,50 @@
+### Obtener lista de usuarios
+GET http://localhost/apimovil/index.php/user/list?limit=20
+Accept: application/json
+
+###
+
+### Eliminar usuario
+
+DELETE http://localhost/apimovil/index.php/user/delete?documento=12344534567
+Content-Type: application/x-www-form-urlencoded
+
+
+###
+
+### Insertar usuario
+POST http://localhost/apimovil/index.php/user/create
+Content-Type: application/json
+
+{
+  "documento": 1234454333455563567,
+  "nombre": "Dixon",
+  "apellido": "Pérez",
+  "usuario": "juanperez",
+  "contrasenia": "password123"
+}
+
+###
+
+### Actualizar usuario
+PUT http://localhost/apimovil/index.php/user/update
+Content-Type: application/application/json
+
+{
+  "documento": 12344534567,
+  "nombre": "asdfasdfadf",
+  "apellido": "Pérez",
+  "usuario": "juanperez",
+  "contrasenia": "password123"
+}
+
+###
+
+### Iniciar sesión
+POST http://localhost/apimovil/index.php/user/login
+Content-Type: application/json
+
+{
+  "usuario": "dixon",
+  "contrasenia": "password"
+}
