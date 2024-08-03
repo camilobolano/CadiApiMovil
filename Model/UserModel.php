@@ -63,7 +63,7 @@ class UserModel extends Database
     public function login($usuario, $contrasenia)
     {
         // Usando named placeholders en lugar de signos de interrogación
-        $sql = "SELECT * FROM usuario WHERE usuario = :usuario AND contrasenia = :contrasenia";
+        $sql = "SELECT * FROM usuario WHERE usuario = :usuario AND contrasenia = :contrasenia limit 1";
         $params = [
             'usuario' => $usuario,
             'contrasenia' => $contrasenia
