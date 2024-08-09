@@ -58,6 +58,19 @@ class Database
         }
     }
 
+    public function selectOne($query = "", $params = [])
+    {
+        try {
+            $stmt = $this->executeStatement($query, $params);
+            return $stmt; // Devuelve el objeto PDOStatement
+        } catch (Exception $e) {
+            throw new Exception("Error en la selección: " . $e->getMessage());
+        }
+    }
+
+
+
+
     public function insert($query = "", $params = [])
     {
         try {

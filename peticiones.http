@@ -4,6 +4,11 @@ Accept: application/json
 
 ###
 
+### Obtener Un usuario
+GET http://localhost/apimovil/index.php/user/getone?documento=1234567890
+Accept: application/json
+###
+
 ### Eliminar usuario
 
 DELETE http://localhost/apimovil/index.php/user/delete?documento=12344534567
@@ -17,11 +22,11 @@ POST http://localhost/apimovil/index.php/user/create
 Content-Type: application/json
 
 {
-  "documento": 1234454333455563567,
-  "nombre": "Dixon",
-  "apellido": "Pérez",
-  "usuario": "juanperez",
-  "contrasenia": "password123"
+  "documento": 1234545453,
+  "nombre": "Camilo",
+  "apellido": "Bolaño",
+  "usuario": "camilo",
+  "contrasenia": "camilo123"
 }
 
 ###
@@ -31,11 +36,11 @@ PUT http://localhost/apimovil/index.php/user/update
 Content-Type: application/application/json
 
 {
-  "documento": 12344534567,
-  "nombre": "asdfasdfadf",
-  "apellido": "Pérez",
-  "usuario": "juanperez",
-  "contrasenia": "password123"
+  "documento": 123456789"0,
+  "nombre": "Dixon",
+  "apellido": "Perez",
+  "usuario": "dixon",
+  "contrasenia": "dixon123"
 }
 
 ###
@@ -46,5 +51,5 @@ Content-Type: application/json
 
 {
   "usuario": "dixon",
-  "contrasenia": "password"
+  "contrasenia": "dixon123"
 }

@@ -132,7 +132,7 @@ class UserController extends BaseController
                     $strErrorDesc = 'No se encontraron resultados';
                     $strErrorHeader = 'HTTP/1.1 404 Not Found';
                 } else {
-                    $responseData = json_encode($arrUsers);
+                    $responseData = json_encode($arrUsers[0]);
                 }
             } catch (Exception $e) {
                 $strErrorDesc = $e->getMessage().' Something went wrong! Please contact support.';
@@ -218,7 +218,7 @@ class UserController extends BaseController
                     $strErrorDesc = 'Usuario o contraseña incorrectos';
                     $strErrorHeader = 'HTTP/1.1 404 Not Found';
                 } else {
-                    $responseData = json_encode($arrUsers);
+                    $responseData = json_encode($arrUsers[0]);
                 }
             } catch (Exception $e) {
                 $strErrorDesc = $e->getMessage().' Something went wrong! Please contact support.';
