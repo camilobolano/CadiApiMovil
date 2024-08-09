@@ -21,7 +21,7 @@ class UserController extends BaseController
                 $arrUsers = $userModel->getUsers($intLimit);
                 $responseData = json_encode($arrUsers);
             } catch (Exception $e) {
-                $strErrorDesc = $e->getMessage().' Something went wrong! Please contact support.';
+                $strErrorDesc = $e->getMessage().' Valide la informacion';
                 $strErrorHeader = 'HTTP/1.1 500 Internal Server Error';
             }
         } else {
@@ -63,7 +63,7 @@ class UserController extends BaseController
                 }
 
             } catch (Exception $e) {
-                $strErrorDesc = $e->getMessage().' Something went wrong! Please contact support.';
+                $strErrorDesc = $e->getMessage().'Valide la informacion';
                 $strErrorHeader = 'HTTP/1.1 500 Internal Server Error';
             }
         } else {
@@ -96,7 +96,7 @@ class UserController extends BaseController
                 $userModel->deleteUser($intDocumento);
                 $responseData = json_encode(array('message' => 'User deleted successfully.'));
             } catch (Exception $e) {
-                $strErrorDesc = $e->getMessage().' Something went wrong! Please contact support.';
+                $strErrorDesc = $e->getMessage().' Valide la informacion';
                 $strErrorHeader = 'HTTP/1.1 500 Internal Server Error';
             }
         } else {
@@ -135,7 +135,7 @@ class UserController extends BaseController
                     $responseData = json_encode($arrUsers[0]);
                 }
             } catch (Exception $e) {
-                $strErrorDesc = $e->getMessage().' Something went wrong! Please contact support.';
+                $strErrorDesc = $e->getMessage().' Valide la informacion';
                 $strErrorHeader = 'HTTP/1.1 500 Internal Server Error';
             }
         } else {
@@ -180,7 +180,7 @@ class UserController extends BaseController
                     $responseData = json_encode(array('message' => 'User updated successfully.'));
                 }
             } catch (Exception $e) {
-                $strErrorDesc = $e->getMessage().' Something went wrong! Please contact support.';
+                $strErrorDesc = $e->getMessage().' Valide la informacion';
                 $strErrorHeader = 'HTTP/1.1 500 Internal Server Error';
             }
         } else {
@@ -221,7 +221,7 @@ class UserController extends BaseController
                     $responseData = json_encode($arrUsers[0]);
                 }
             } catch (Exception $e) {
-                $strErrorDesc = $e->getMessage().' Something went wrong! Please contact support.';
+                $strErrorDesc = $e->getMessage().'Valide la informacion';
                 $strErrorHeader = 'HTTP/1.1 500 Internal Server Error';
             }
         } else {
